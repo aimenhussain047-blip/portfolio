@@ -3,233 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aimen Hussain | Full-Stack Developer Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="family">
+<title>Aimen Hussain - Premium Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-    --bg-dark: #0b0f19;
-    --card-bg: rgba(22, 28, 45, 0.6);
-    --gold: #d4af37;
-    --gold-glow: rgba(212, 175, 55, 0.3);
-    --teal: #1abc9c;
-    --text-light: #f5f5f5;
-    --text-muted: #8a99ad;
+/* Reset and Premium Theme Base */
+* { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease-in-out; }
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #0a0d14; 
+    color: #e2e8f0; 
+    line-height: 1.7;
+    padding-bottom: 60px;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease; }
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-light);
-    line-height: 1.6;
-    overflow-x: hidden;
+/* Premium Dark & Gold Header */
+header { 
+    text-align: center; 
+    padding: 90px 20px; 
+    background: linear-gradient(180deg, #111622 0%, #0a0d14 100%); 
+    border-bottom: 2px solid #dfb73c;
+    box-shadow: 0 4px 30px rgba(223, 183, 60, 0.05);
 }
-
-/* Luxury Hero Section */
-header {
-    text-align: center;
-    padding: 100px 20px;
-    background: radial-gradient(circle at center, #16222f 0%, var(--bg-dark) 70%);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-    position: relative;
-}
-
-header::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(125deg, transparent 45%, rgba(212, 175, 55, 0.05) 50%, transparent 55%);
-    background-size: 200% 200%; animation: shine 6s infinite linear; pointer-events: none;
-}
-
-@keyframes shine { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-
-header h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3.5rem;
-    color: var(--gold);
-    letter-spacing: 3px;
-    text-shadow: 0 0 20px var(--gold-glow);
+header h1 { 
+    font-family: 'Cinzel', serif; 
+    font-size: 42px; 
+    color: #dfb73c; 
+    letter-spacing: 4px;
     margin-bottom: 15px;
+    text-shadow: 0px 0px 15px rgba(223, 183, 60, 0.3);
 }
-
-header p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
+header p { 
+    font-size: 16px; 
+    color: #94a3b8; 
+    letter-spacing: 1.5px;
     font-weight: 300;
-    letter-spacing: 1px;
-}
-
-header p span { color: var(--text-light); font-weight: 600; }
-
-/* Section Styling */
-.container { max-width: 1140px; margin: 60px auto; padding: 0 20px; }
-
-h2.section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2rem;
-    color: var(--text-light);
-    border-left: 4px solid var(--gold);
-    padding-left: 15px;
-    margin-bottom: 35px;
-    letter-spacing: 1px;
-    position: relative;
-}
-
-/* Projects Premium Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 30px;
-    backdrop-filter: blur(8px);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
-}
-
-.project-card.featured {
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    background: linear-gradient(145deg, rgba(22, 28, 45, 0.8), rgba(11, 15, 25, 0.8));
-}
-
-.project-card h3 {
-    font-size: 1.4rem;
-    color: var(--text-light);
-    margin-bottom: 12px;
-}
-
-.project-card.featured h3 { color: var(--gold); }
-
-.tech-stack {
-    font-size: 0.85rem;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-.project-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 20px;
+/* Structural Layout Container */
+section { max-width: 950px; margin: 50px auto; padding: 0 25px; }
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #dfb73c;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(223, 183, 60, 0.2);
+    padding-bottom: 10px;
+    letter-spacing: 2px;
 }
 
-.project-card ul {
-    list-style: none;
-    margin-bottom: 20px;
+/* Glassmorphism Luxury Cards */
+.project { 
+    background: rgba(17, 22, 34, 0.75); 
+    margin-bottom: 35px; 
+    padding: 30px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(223, 183, 60, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+.project:hover { 
+    border-color: #dfb73c; 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 35px rgba(223, 183, 60, 0.15); 
+}
+.project h3 { 
+    font-size: 22px; 
+    color: #ffffff; 
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.project p { color: #94a3b8; margin-bottom: 15px; font-size: 15px; }
+.project p strong { color: #dfb73c; font-weight: 600; }
+
+.project ul { list-style-type: none; margin-left: 5px; margin-bottom: 20px; }
+.project ul li { margin-bottom: 10px; position: relative; padding-left: 20px; color: #cbd5e1; font-size: 14.5px; }
+.project ul li::before { 
+    content: "✦"; 
+    position: absolute; 
+    left: 0; 
+    color: #dfb73c; 
 }
 
-.project-card ul li {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 18px;
-}
-
-.project-card ul li::before {
-    content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.8rem;
-}
-
-.role-badge {
-    font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 6px 14px;
-    border-radius: 20px;
-    color: var(--text-light);
+.role-tag {
     display: inline-block;
-    width: fit-content;
-}
-
-.project-card.featured .role-badge {
-    background: rgba(212, 175, 55, 0.1);
-    color: var(--gold);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-/* Skills Grid Style */
-.skills-wrapper {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 40px;
+    background: rgba(223, 183, 60, 0.08);
+    color: #dfb73c;
+    padding: 5px 15px;
     border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(223, 183, 60, 0.2);
 }
 
+/* Skills Layout Dashboard */
+.skills { 
+    background: #111622; 
+    padding: 35px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(223, 183, 60, 0.1);
+}
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
-
-.skill-category h4 {
-    color: var(--gold);
-    font-size: 1.1rem;
+.skills-category h4 {
+    color: #dfb73c;
+    font-size: 16px;
     margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+.skills-category ul { list-style: none; }
+.skills-category ul li { color: #cbd5e1; font-size: 14px; margin-bottom: 8px; }
 
-.skill-category ul { list-style: none; }
-.skill-category ul li {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-}
-
-/* Contact Footer Area */
-.contact-wrapper {
-    background: linear-gradient(180deg, var(--bg-dark) 0%, #060911 100%);
-    border-top: 1px solid rgba(212, 175, 55, 0.15);
-    padding: 60px 20px;
+/* Luxury Contact Wrapper */
+.contact { 
+    background: #111622; 
+    padding: 40px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(223, 183, 60, 0.1); 
     text-align: center;
 }
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 25px 0;
-    flex-wrap: wrap;
+.contact p { margin-bottom: 15px; color: #94a3b8; }
+.contact a { 
+    color: #dfb73c; 
+    text-decoration: none; 
+    font-weight: 600; 
+    padding: 8px 16px;
+    border: 1px solid rgba(223, 183, 60, 0.2);
+    border-radius: 6px;
+    display: inline-block;
+    margin: 5px;
+}
+.contact a:hover { 
+    background: #dfb73c; 
+    color: #0a0d14; 
+    box-shadow: 0 0 15px rgba(223, 183, 60, 0.4); 
 }
 
-.contact-links a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 1.05rem;
-    padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-}
+footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px; letter-spacing: 1px; }
 
-.contact-links a:hover {
-    color: var(--gold);
-    border-color: var(--gold);
-    box-shadow: 0 0 15px var(--gold-glow);
-}
-
-footer {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.3);
-    margin-top: 30px;
-}
-
-@media(max-width: 768px) {
-    header h1 { font-size: 2.5rem; }
-    .projects-grid { grid-template-columns: 1fr; }
+@media(max-width:600px){
+    header h1 { font-size: 32px; }
+    header p { font-size: 13px; }
+    .skills-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 </style>
 </head>
@@ -237,209 +158,171 @@ footer {
 
 <header>
   <h1>Aimen Hussain</h1>
-  <p>Full-Stack Web Developer <span>|</span> Android Developer <span>|</span> WordPress Specialist</p>
+  <p>Full-Stack Web Developer &bull; Android Developer &bull; WordPress Specialist</p>
 </header>
 
-<div class="container">
-  <h2 class="section-title">Core Architecture & Development</h2>
-  <div class="projects-grid">
-    
-    <div class="project-card featured">
-      <div>
-        <div class="tech-stack">HTML5 · CSS3 · JavaScript · MongoDB</div>
-        <h3>Aimen Mart – E-Commerce Platform</h3>
-        <p>A robust and fluid online retail infrastructure built to scale dynamic store workflows.</p>
-        <ul>
-          <li>Engineered dynamic product management architecture with flexible MongoDB models.</li>
-          <li>Crafted complex cart schemas and highly responsive front-end customer paths.</li>
-          <li>Maintained structured repositories via Git for smooth deployment lifecycle tracking.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Lead Full-Stack Developer</div>
-    </div>
+<section>
+  <h2 class="section-title">Core Architecture & Web Deployments</h2>
 
-    <div class="project-card featured">
-      <div>
-        <div class="tech-stack">DLD Logic · Sensors · Servo Actuators</div>
-        <h3>Object Detection Radar System</h3>
-        <p>A smart spatial sensing and monitoring automation hardware logic module.</p>
-        <ul>
-          <li>Programmed high-precision ultrasonic processing logic for surrounding scans.</li>
-          <li>Calibrated hardware sweeps capable of mapping instant intrusion inside a 1m matrix.</li>
-          <li>Configured automatic motor-driven active path routing triggered on target data alerts.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Circuit Architect & Logic Designer</div>
-    </div>
-
-    <div class="project-card">
-      <div>
-        <div class="tech-stack">PHP · MySQL · JavaScript · Bootstrap</div>
-        <h3>Nexus Platform Infrastructure</h3>
-        <p>Scalable software framework custom tailored to process clean analytics data workflows.</p>
-        <ul>
-          <li>Built structural relational layouts capable of handling secure complex metrics data.</li>
-          <li>Optimized rapid endpoint API routing maps for optimized system integration.</li>
-          <li>Shipped an elegant layout design dashboard layout built for corporate analytics.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Full-Stack Engineer</div>
-    </div>
-
+  <div class="project">
+    <h3>Aimen Mart – E-Commerce Platform</h3>
+    <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript (ES6+), MongoDB, GitHub</p>
+    <ul>
+      <li>Engineered a highly flexible product database schema structure using dynamic MongoDB configurations.</li>
+      <li>Developed responsive customer shopping workflows coupled with dynamic web cart state logic.</li>
+      <li>Maintained full system tracking and deployment pipelines systematically via structured Git repositories.</li>
+    </ul>
+    <div class="role-tag">Lead Full-Stack Developer</div>
   </div>
-</div>
 
-<div class="container">
-  <h2 class="section-title">Data Pipelines & Enterprise Workflows</h2>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <div>
-        <div class="tech-stack">Apache Airflow · Python · MySQL</div>
-        <h3>Automated Orchestration Pipeline</h3>
-        <p>Data engineering framework designed to coordinate distributed tasks smoothly.</p>
-        <ul>
-          <li>Wrote Pythonic directed acyclic graphs (DAGs) to handle custom extraction workflows.</li>
-          <li>Integrated automatic alert task parameters and recovery fail-safes on tasks.</li>
-          <li>Maintained high schema synchronization across production web databases.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Data Orchestrator</div>
-    </div>
-
-    <div class="project-card">
-      <div>
-        <div class="tech-stack">PHP · MySQL · HTML5 · JavaScript</div>
-        <h3>Pizza Hut Management Hub</h3>
-        <p>A secure transactional restaurant administration and active processing management program.</p>
-        <ul>
-          <li>Designed transactional queries to control dynamic digital food menus.</li>
-          <li>Synchronized client-side checkout triggers instantly with administrative dashboards.</li>
-          <li>Constructed intuitive dashboard portals for seamless daily item logging.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Full-Stack Developer</div>
-    </div>
-
-    <div class="project-card">
-      <div>
-        <div class="tech-stack">PHP · MySQL · Bootstrap · Architecture</div>
-        <h3>Enterprise Architecture System</h3>
-        <p>High-availability corporate administrative app built with modular collaborative structures.</p>
-        <ul>
-          <li>Collaborated in a core team of four to design structural enterprise patterns.</li>
-          <li>Shipped role-based security layers restricting confidential corporate asset files.</li>
-          <li>Created administrative data audit trackers monitoring team logging actions.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Core Backend Developer</div>
-    </div>
-
+  <div class="project">
+    <h3>Nexus Platform Framework</h3>
+    <p><strong>Technologies:</strong> PHP, JavaScript, MySQL, Bootstrap, GitHub</p>
+    <ul>
+      <li>Constructed clean relational architectures inside MySQL to effectively store secure enterprise transactional activities.</li>
+      <li>Optimized custom structural API backbones to enhance data transmission across operational frameworks.</li>
+      <li>Designed an administrative analytical command dashboard optimized for corporate performance review fields.</li>
+    </ul>
+    <div class="role-tag">Full-Stack Developer</div>
   </div>
-</div>
 
-<div class="container">
-  <h2 class="section-title">Academic & Portal Deployments</h2>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <div>
-        <div class="tech-stack">Hardware Integration · Circuit Arrays</div>
-        <h3>Smart Home Design Prototype</h3>
-        <p>A physical architectural model embedded with interactive circuitry relays.</p>
-        <ul>
-          <li>Constructed a balanced tactile cardboard structure with built-in electronics tracks.</li>
-          <li>Wired customized LED lighting arrays for independent dynamic room controls.</li>
-          <li>Integrated toggled low-voltage fan elements executing clean mechanical functions.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Hardware Builder</div>
-    </div>
-
-    <div class="project-card">
-      <div>
-        <div class="tech-stack">Node.js · MySQL · JavaScript · Audio API</div>
-        <h3>Quran & Naat Learning Application</h3>
-        <p>Functional portal offering dynamic database file streaming paths.</p>
-        <ul>
-          <li>Configured encrypted authentication pathways via Node using Bcrypt functions.</li>
-          <li>Implemented native media rendering loops for lag-free audio stream playbacks.</li>
-          <li>Connected structured customer review collection forms directly into SQL blocks.</li>
-        </ul>
-      </div>
-      <div class="role-badge">Full-Stack Developer</div>
-    </div>
-
-    <div class="project-card">
-      <div>
-        <div class="tech-stack">HTML5 · CSS3 · UI Design · JS Essentials</div>
-        <h3>Attendance Management Portal</h3>
-        <p>A clean administrative tracking interface built for rapid layout management.</p>
-        <ul>
-          <li>Constructed intuitive control dashboards optimizing fast workflow actions.</li>
-          <li>Designed fluid responsive screens tailored for varying viewport sizes.</li>
-          <li>Optimized local frontend verification systems for rapid user logins.</li>
-        </ul>
-      </div>
-      <div class="role-badge">UI/UX Front-End Developer</div>
-    </div>
-
+  <div class="project">
+    <h3>Automated Data Orchestration Pipeline</h3>
+    <p><strong>Technologies:</strong> Apache Airflow, Python, MySQL, Git</p>
+    <ul>
+      <li>Built automated operational workflows utilizing Pythonic Directed Acyclic Graphs (DAGs) inside Apache Airflow.</li>
+      <li>Programmed robust structural error logs and automatic job retry modules to guarantee pipeline uptime.</li>
+      <li>Synchronized dynamic records systematically across application endpoints and back-end reporting platforms.</li>
+    </ul>
+    <div class="role-tag">Backend & Data Engineer</div>
   </div>
-</div>
 
-<div class="container">
-  <h2 class="section-title">Expertise Spectrum</h2>
-  <div class="skills-wrapper">
+  <div class="project">
+    <h3>Pizza Hut Management System</h3>
+    <p><strong>Technologies:</strong> PHP, MySQL, HTML5, CSS3, JavaScript</p>
+    <ul>
+      <li>Built an order allocation and tracking terminal custom engineered for operational workflow tracking.</li>
+      <li>Wired active customer ordering procedures instantly to structural administrative checkout screens.</li>
+      <li>Maintained relational parameters to oversee real-time inventory alterations and automated billing logs.</li>
+    </ul>
+    <div class="role-tag">Full-Stack Web Developer</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Engineering Systems & Portal Deployments</h2>
+
+  <div class="project">
+    <h3>Object Detection Radar System</h3>
+    <p><strong>Technologies:</strong> Digital Logic Design (DLD), Ultrasonic Sensors, Circuitry, Servo Actuators</p>
+    <ul>
+      <li>Assembled an automated short-range hardware sweep setup configured for structural radar scanning actions.</li>
+      <li>Programmed active sensor processing arrays to automatically track immediate dynamic obstacles in a 1m scope.</li>
+      <li>Engineered rapid feedback electrical circuit parameters executing swift tracking gear repositioning.</li>
+    </ul>
+    <div class="role-tag">Circuit Architect & Logic Designer</div>
+  </div>
+
+  <div class="project">
+    <h3>Smart Home Prototype Layout</h3>
+    <p><strong>Technologies:</strong> Hardware Interfacing, Architectural Cardboard Setup, LED Modules, DC Fan Subsystem</p>
+    <ul>
+      <li>Constructed a custom spatial scale building prototype embedded with direct operational electronic arrays.</li>
+      <li>Wired a localized main circuitry hub overseeing isolated multi-room lighting environments.</li>
+      <li>Integrated a mechanical toggled ventilation module functioning on low-voltage direct current relays.</li>
+    </ul>
+    <div class="role-tag">Hardware Project Builder</div>
+  </div>
+
+  <div class="project">
+    <h3>Quran & Naat Learning Application</h3>
+    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, MySQL, Audio API</p>
+    <ul>
+      <li>Deployed safe user dashboard entries leveraging encrypted Node.js components utilizing Bcrypt integrations.</li>
+      <li>Created seamless media processing layers for premium interruption-free playback control routines.</li>
+      <li>Connected dynamic feedback logging paths directly to live persistent database arrays.</li>
+    </ul>
+    <div class="role-tag">Full-Stack Developer</div>
+  </div>
+
+  <div class="project">
+    <h3>Enterprise Architecture System</h3>
+    <p><strong>Technologies:</strong> PHP, MySQL, JavaScript, Bootstrap</p>
+    <ul>
+      <li>Collaborated actively inside a 4-member development unit implementing modern corporate application patterns.</li>
+      <li>Integrated protected access barriers to manage secure multi-tier account configuration systems.</li>
+      <li>Engineered operational data tracking features loggers logging ongoing manager operations.</li>
+    </ul>
+    <div class="role-tag">Backend Developer & Team Collaborator</div>
+  </div>
+
+  <div class="project">
+    <h3>Attendance Management System</h3>
+    <p><strong>Technologies:</strong> HTML5, CSS3, Vanilla JavaScript</p>
+    <ul>
+      <li>Designed optimized frontend user environments ensuring instant navigation between tracking panels.</li>
+      <li>Programmed fully mobile-fluid grid viewports maintaining pixel-perfect fidelity across handheld interfaces.</li>
+      <li>Constructed localized client-side entry verification scripts providing swift account validations.</li>
+    </ul>
+    <div class="role-tag">UI/UX Front-End Developer</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Technical Expertise</h2>
+  <div class="skills">
     <div class="skills-grid">
-      <div class="skill-category">
-        <h4>Languages</h4>
+      <div class="skills-category">
+        <h4>Core Languages</h4>
         <ul>
-          <li>Python / PHP</li>
-          <li>JavaScript (ES6+)</li>
+          <li>Python</li>
+          <li>PHP</li>
           <li>C++</li>
+          <li>JavaScript (ES6+)</li>
         </ul>
       </div>
-      <div class="skill-category">
+      <div class="skills-category">
         <h4>Web & Mobile</h4>
         <ul>
-          <li>WordPress Development</li>
-          <li>React Native / Snack Expo</li>
-          <li>Bootstrap / CSS Grid</li>
+          <li>WordPress</li>
+          <li>React Native</li>
+          <li>Snack Expo & Bootstrap</li>
+          <li>HTML5 / CSS3 Grid</li>
         </ul>
       </div>
-      <div class="skill-category">
-        <h4>Data & Workflows</h4>
-        <h4>Databases</h4>
+      <div class="skills-category">
+        <h4>Data & Databases</h4>
         <ul>
           <li>MongoDB (NoSQL)</li>
           <li>MySQL / PostgreSQL</li>
           <li>Apache Airflow</li>
         </ul>
       </div>
-      <div class="skill-category">
-        <h4>Engineering Tools</h4>
+      <div class="skills-category">
+        <h4>Workflows</h4>
         <ul>
           <li>Git & GitHub Pipelines</li>
           <li>Figma / Canva</li>
-          <li>Hardware Circuit Logic</li>
+          <li>DLD Circuit Design</li>
         </ul>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="contact-wrapper">
-  <h2 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 10px;">Connect Professionally</h2>
-  <p style="color: var(--text-muted);">Available for Full-Stack, Web Automation, and Interface Engineering opportunities.</p>
-  <div class="contact-links">
+<section>
+  <h2 class="section-title">Contact</h2>
+  <div class="contact">
+    <p>Feel free to reach out for professional collaborations or development opportunities.</p>
     <a href="mailto:aimen.hussain@example.com">Email Profile</a>
-    <a href="https://github.com/aimenhussain047-blip" target="_blank">GitHub Repository</a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
+    <a href="https://github.com/aimenhussain047-blip" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
   </div>
-  <footer>
-    &copy; 2026 Aimen Hussain. Crafted for Premium Technical Showcase.
-  </footer>
-</div>
+</section>
+
+<footer>
+  &copy; 2026 Aimen Hussain. All Rights Reserved.
+</footer>
 
 </body>
 </html>
