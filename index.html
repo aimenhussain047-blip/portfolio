@@ -6,28 +6,21 @@
 <title>Aimen Hussain - Premium Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-/* Reset and Premium Custom Dark Theme Base */
 * { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease-in-out; }
 body { 
     font-family: 'Montserrat', sans-serif; 
-    /* Beautiful Rich Velvet Blue-Grey Slate Background */
-    background: radial-gradient(circle at top, #1a2333 0%, #0f141c 80%);
-    background-color: #0f141c; 
+    background: radial-gradient(circle at top, #1a2333 0%, #0f141c 80%) !important;
+    background-color: #0f141c !important; 
     color: #e2e8f0; 
     line-height: 1.7;
     padding-bottom: 60px;
 }
-
-/* Premium Header with Shimmer Effect */
 header { 
     text-align: center; 
     padding: 100px 20px; 
     background: linear-gradient(180deg, rgba(26, 35, 51, 0.5) 0%, rgba(15, 20, 28, 0) 100%); 
     border-bottom: 2px solid #dfb73c;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
-
-/* Pyaara Animated Name Content */
 header h1 { 
     font-family: 'Cinzel', serif; 
     font-size: 52px; 
@@ -35,16 +28,12 @@ header h1 {
     letter-spacing: 5px;
     margin-bottom: 15px;
     display: inline-block;
-    
-    /* Gold Gradient & Shimmer Text Animation */
     background: linear-gradient(90deg, #b38728, #fbf5b7, #daaf3c, #fbf5b7, #b38728);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: goldShimmer 4s linear infinite, nameGlow 3s ease-in-out infinite alternate;
 }
-
-/* Animations for Name */
 @keyframes goldShimmer {
     0% { background-position: 0% center; }
     100% { background-position: 200% center; }
@@ -53,19 +42,8 @@ header h1 {
     from { filter: drop-shadow(0 0 2px rgba(223, 183, 60, 0.2)); }
     to { filter: drop-shadow(0 0 12px rgba(223, 183, 60, 0.6)); }
 }
-
-header p { 
-    font-size: 15px; 
-    color: #94a3b8; 
-    letter-spacing: 2px;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-top: 10px;
-}
-
-/* Structural Layout Container */
+header p { font-size: 15px; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase; }
 section { max-width: 950px; margin: 50px auto; padding: 0 25px; }
-
 .section-title {
     font-family: 'Cinzel', serif;
     font-size: 24px;
@@ -73,10 +51,7 @@ section { max-width: 950px; margin: 50px auto; padding: 0 25px; }
     margin-bottom: 30px;
     border-bottom: 1px solid rgba(223, 183, 60, 0.2);
     padding-bottom: 10px;
-    letter-spacing: 2px;
 }
-
-/* Glassmorphism Luxury Slate Cards */
 .project { 
     background: rgba(26, 35, 51, 0.45); 
     margin-bottom: 35px; 
@@ -85,33 +60,16 @@ section { max-width: 950px; margin: 50px auto; padding: 0 25px; }
     border: 1px solid rgba(255, 255, 255, 0.03);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 .project:hover { 
     border-color: rgba(223, 183, 60, 0.5); 
     transform: translateY(-5px); 
-    background: rgba(26, 35, 51, 0.65);
-    box-shadow: 0 15px 35px rgba(223, 183, 60, 0.12); 
 }
-.project h3 { 
-    font-size: 22px; 
-    color: #ffffff; 
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-.project p { color: #94a3b8; margin-bottom: 15px; font-size: 15px; }
-.project p strong { color: #dfb73c; font-weight: 600; }
-
-.project ul { list-style-type: none; margin-left: 5px; margin-bottom: 20px; }
-.project ul li { margin-bottom: 10px; position: relative; padding-left: 20px; color: #cbd5e1; font-size: 14.5px; }
-.project ul li::before { 
-    content: "✦"; 
-    position: absolute; 
-    left: 0; 
-    color: #dfb73c; 
-}
-
+.project h3 { font-size: 22px; color: #ffffff; margin-bottom: 10px; font-weight: 600; }
+.project p { color: #94a3b8; margin-bottom: 15px; }
+.project ul { list-style-type: none; margin-bottom: 20px; }
+.project ul li { margin-bottom: 10px; position: relative; padding-left: 20px; color: #cbd5e1; }
+.project ul li::before { content: "✦"; position: absolute; left: 0; color: #dfb73c; }
 .role-tag {
     display: inline-block;
     background: rgba(223, 183, 60, 0.08);
@@ -122,63 +80,19 @@ section { max-width: 950px; margin: 50px auto; padding: 0 25px; }
     font-weight: 600;
     border: 1px solid rgba(223, 183, 60, 0.2);
 }
-
-/* Skills Layout Dashboard */
-.skills { 
-    background: rgba(26, 35, 51, 0.45); 
-    padding: 35px; 
-    border-radius: 16px; 
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
-.skills-category h4 {
-    color: #dfb73c;
-    font-size: 16px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+.skills { background: rgba(26, 35, 51, 0.45); padding: 35px; border-radius: 16px; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+.skills-category h4 { color: #dfb73c; margin-bottom: 15px; text-transform: uppercase; }
 .skills-category ul { list-style: none; }
-.skills-category ul li { color: #cbd5e1; font-size: 14px; margin-bottom: 8px; }
-
-/* Luxury Contact Wrapper */
-.contact { 
-    background: rgba(26, 35, 51, 0.45); 
-    padding: 40px; 
-    border-radius: 16px; 
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
-.contact p { margin-bottom: 15px; color: #94a3b8; }
+.skills-category ul li { color: #cbd5e1; margin-bottom: 8px; }
+.contact { background: rgba(26, 35, 51, 0.45); padding: 40px; border-radius: 16px; text-align: center; }
 .contact a { 
-    color: #dfb73c; 
-    text-decoration: none; 
-    font-weight: 600; 
-    padding: 10px 22px;
-    border: 1px solid rgba(223, 183, 60, 0.3);
-    border-radius: 6px;
-    display: inline-block;
-    margin: 5px;
+    color: #dfb73c; text-decoration: none; font-weight: 600; padding: 10px 22px;
+    border: 1px solid rgba(223, 183, 60, 0.3); border-radius: 6px; display: inline-block; margin: 5px;
 }
-.contact a:hover { 
-    background: #dfb73c; 
-    color: #0f141c; 
-    box-shadow: 0 0 15px rgba(223, 183, 60, 0.4); 
-}
-
-footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px; letter-spacing: 1px; }
-
-@media(max-width:600px){
-    header h1 { font-size: 34px; letter-spacing: 2px; }
-    header p { font-size: 12px; }
-    .skills-grid { grid-template-columns: 1fr; gap: 20px; }
-}
+.contact a:hover { background: #dfb73c; color: #0f141c; }
+footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px; }
+@media(max-width:600px){ header h1 { font-size: 34px; } .skills-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -197,7 +111,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <ul>
       <li>Engineered a highly flexible product database schema structure using dynamic MongoDB configurations.</li>
       <li>Developed responsive customer shopping workflows coupled with dynamic web cart state logic.</li>
-      <li>Maintained full system tracking and deployment pipelines systematically via structured Git repositories.</li>
     </ul>
     <div class="role-tag">Lead Full-Stack Developer</div>
   </div>
@@ -207,8 +120,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <p><strong>Technologies:</strong> PHP, JavaScript, MySQL, Bootstrap, GitHub</p>
     <ul>
       <li>Constructed clean relational architectures inside MySQL to effectively store secure enterprise transactional activities.</li>
-      <li>Optimized custom structural API backbones to enhance data transmission across operational frameworks.</li>
-      <li>Designed an administrative analytical command dashboard optimized for corporate performance review fields.</li>
     </ul>
     <div class="role-tag">Full-Stack Developer</div>
   </div>
@@ -218,8 +129,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <p><strong>Technologies:</strong> Apache Airflow, Python, MySQL, Git</p>
     <ul>
       <li>Built automated operational workflows utilizing Pythonic Directed Acyclic Graphs (DAGs) inside Apache Airflow.</li>
-      <li>Programmed robust structural error logs and automatic job retry modules to guarantee pipeline uptime.</li>
-      <li>Synchronized dynamic records systematically across application endpoints and back-end reporting platforms.</li>
     </ul>
     <div class="role-tag">Backend & Data Engineer</div>
   </div>
@@ -229,8 +138,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <p><strong>Technologies:</strong> PHP, MySQL, HTML5, CSS3, JavaScript</p>
     <ul>
       <li>Built an order allocation and tracking terminal custom engineered for operational workflow tracking.</li>
-      <li>Wired active customer ordering procedures instantly to structural administrative checkout screens.</li>
-      <li>Maintained relational parameters to oversee real-time inventory alterations and automated billing logs.</li>
     </ul>
     <div class="role-tag">Full-Stack Web Developer</div>
   </div>
@@ -245,7 +152,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <ul>
       <li>Assembled an automated short-range hardware sweep setup configured for structural radar scanning actions.</li>
       <li>Programmed active sensor processing arrays to automatically track immediate dynamic obstacles in a 1m scope.</li>
-      <li>Engineered rapid feedback electrical circuit parameters executing swift tracking gear repositioning.</li>
     </ul>
     <div class="role-tag">Circuit Architect & Logic Designer</div>
   </div>
@@ -255,8 +161,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <p><strong>Technologies:</strong> Hardware Interfacing, Architectural Cardboard Setup, LED Modules, DC Fan Subsystem</p>
     <ul>
       <li>Constructed a custom spatial scale building prototype embedded with direct operational electronic arrays.</li>
-      <li>Wired a localized main circuitry hub overseeing isolated multi-room lighting environments.</li>
-      <li>Integrated a mechanical toggled ventilation module functioning on low-voltage direct current relays.</li>
     </ul>
     <div class="role-tag">Hardware Project Builder</div>
   </div>
@@ -266,8 +170,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, MySQL, Audio API</p>
     <ul>
       <li>Deployed safe user dashboard entries leveraging encrypted Node.js components utilizing Bcrypt integrations.</li>
-      <li>Created seamless media processing layers for premium interruption-free playback control routines.</li>
-      <li>Connected dynamic feedback logging paths directly to live persistent database arrays.</li>
     </ul>
     <div class="role-tag">Full-Stack Developer</div>
   </div>
@@ -277,8 +179,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <p><strong>Technologies:</strong> PHP, MySQL, JavaScript, Bootstrap</p>
     <ul>
       <li>Collaborated actively inside a 4-member development unit implementing modern corporate application patterns.</li>
-      <li>Integrated protected access barriers to manage secure multi-tier account configuration systems.</li>
-      <li>Engineered operational data tracking features loggers logging ongoing manager operations.</li>
     </ul>
     <div class="role-tag">Backend Developer & Team Collaborator</div>
   </div>
@@ -288,8 +188,6 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <p><strong>Technologies:</strong> HTML5, CSS3, Vanilla JavaScript</p>
     <ul>
       <li>Designed optimized frontend user environments ensuring instant navigation between tracking panels.</li>
-      <li>Programmed fully mobile-fluid grid viewports maintaining pixel-perfect fidelity across handheld interfaces.</li>
-      <li>Constructed localized client-side entry verification scripts providing swift account validations.</li>
     </ul>
     <div class="role-tag">UI/UX Front-End Developer</div>
   </div>
@@ -301,37 +199,19 @@ footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 13px
     <div class="skills-grid">
       <div class="skills-category">
         <h4>Core Languages</h4>
-        <ul>
-          <li>Python</li>
-          <li>PHP</li>
-          <li>C++</li>
-          <li>JavaScript (ES6+)</li>
-        </ul>
+        <ul><li>Python</li><li>PHP</li><li>C++</li><li>JavaScript</li></ul>
       </div>
       <div class="skills-category">
         <h4>Web & Mobile</h4>
-        <ul>
-          <li>WordPress</li>
-          <li>React Native</li>
-          <li>Snack Expo & Bootstrap</li>
-          <li>HTML5 / CSS3 Grid</li>
-        </ul>
+        <ul><li>WordPress</li><li>React Native</li><li>Bootstrap</li></ul>
       </div>
       <div class="skills-category">
         <h4>Data & Databases</h4>
-        <ul>
-          <li>MongoDB (NoSQL)</li>
-          <li>MySQL / PostgreSQL</li>
-          <li>Apache Airflow</li>
-        </ul>
+        <ul><li>MongoDB</li><li>MySQL</li><li>Apache Airflow</li></ul>
       </div>
       <div class="skills-category">
         <h4>Workflows</h4>
-        <ul>
-          <li>Git & GitHub Pipelines</li>
-          <li>Figma / Canva</li>
-          <li>DLD Circuit Design</li>
-        </ul>
+        <ul><li>Git & GitHub</li><li>Figma</li><li>DLD Circuits</li></ul>
       </div>
     </div>
   </div>
